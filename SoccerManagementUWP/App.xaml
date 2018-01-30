@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="SoccerManagementUWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoccerManagementUWP"
+    RequestedTheme="Light">
+
+</Application>
