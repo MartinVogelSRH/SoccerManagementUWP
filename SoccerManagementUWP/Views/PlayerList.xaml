@@ -8,8 +8,9 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
         <AppBarButton Icon="Back" Click="AppBarButton_Click"/>
-        <ListBox x:Name="lb_playerListBox" HorizontalAlignment="Left"  Margin="102,162,0,0" VerticalAlignment="Top"/>
-
+        <ListBox x:Name="lb_playerListBox" HorizontalAlignment="Stretch"  Margin="5" VerticalAlignment="Top"/>
+        </StackPanel>
     </Grid>
 </Page>
