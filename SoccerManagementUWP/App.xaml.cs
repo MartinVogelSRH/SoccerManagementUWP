@@ -24,7 +24,7 @@ namespace SoccerManagementUWP
     /// </summary>
     sealed partial class App : Application
     {
-        public static IMongoDatabase IMongoDB;
+        public static IMongoDatabase _IMongoDB;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -43,7 +43,7 @@ namespace SoccerManagementUWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            IMongoDB = MongoConnection.mongoConnect();
+            _IMongoDB = MongoConnection.mongoConnect();
             //usage:
             //var collection = App.IMongoDB.GetCollection<BsonDocument>("balls");
             //then use collection to query or insert

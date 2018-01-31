@@ -10,13 +10,5 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:Name="b_showPlayerList" Content="Button" HorizontalAlignment="Left" Margin="287,298,0,0" VerticalAlignment="Top" Click="b_showPlayerList_Click"/>
 
-
-
-
-
-
-
-
-
     </Grid>
 </Page>

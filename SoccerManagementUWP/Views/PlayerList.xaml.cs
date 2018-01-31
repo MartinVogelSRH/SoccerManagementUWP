@@ -31,7 +31,7 @@ namespace SoccerManagementUWP.Views
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var collection = App.IMongoDB.GetCollection<BsonDocument>("people");
+            var collection = App._IMongoDB.GetCollection<BsonDocument>("people");
 
             var findFluent = collection.Find(_ => true).ToList();
             var x = findFluent;
