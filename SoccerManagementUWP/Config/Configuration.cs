@@ -8,7 +8,7 @@ namespace SoccerManagementUWP.Config
 {
     public static class Configuration
     {
-        public static string mongoConnectionString = "mongodb://localhost:27017";
-        public static string mongoDatabaseName = "soccer";
+        public static string mongoConnectionString = "mongodb://172.27.1.181:27017";
+        public static string mongoDatabaseName = "football-data";
     }
 }

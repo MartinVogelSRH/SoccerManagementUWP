@@ -97,7 +97,6 @@
     </Compile>
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Database\MongoConnection.cs" />
-    <Compile Include="Database\MongoInsert.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
