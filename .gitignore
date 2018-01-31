@@ -261,4 +261,4 @@ __pycache__/
 *.pyc
 
 # Configurations - manually added
-./SoccerManagementUWP/Configuration/Configuration.cs
+./SoccerManagementUWP/Config/Configuration.cs
