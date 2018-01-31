@@ -1,4 +1,5 @@
-﻿using SoccerManagementUWP.Database;
+﻿using MongoDB.Driver;
+using SoccerManagementUWP.Database;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,8 @@ namespace SoccerManagementUWP
     /// </summary>
     sealed partial class App : Application
     {
+        public static IMongoDatabase IMongoDB;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -40,7 +43,10 @@ namespace SoccerManagementUWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            MongoConnection.mongoConnect();
+            IMongoDB = MongoConnection.mongoConnect();
+            //usage:
+            //var collection = App.IMongoDB.GetCollection<BsonDocument>("balls");
+            //then use collection to query or insert
 
             Frame rootFrame = Window.Current.Content as Frame;
 
