@@ -8,7 +8,9 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="b_showPlayerList" Content="Button" HorizontalAlignment="Left" Margin="287,298,0,0" VerticalAlignment="Top" Click="b_showPlayerList_Click"/>
-
+        <StackPanel>
+        <Button x:Name="b_showPlayerList" Content="PlayerList" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Click="b_showPlayerList_Click"/>
+            <Button x:Name="b_showPlayerProfile" Content="PlayerProfile" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Click="b_showPlayerProfile_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

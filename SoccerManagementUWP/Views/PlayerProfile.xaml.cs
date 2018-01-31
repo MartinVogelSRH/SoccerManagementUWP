@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,5 +33,13 @@ namespace SoccerManagementUWP.Views
         {
             Frame.GoBack();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var command = new JsonCommand<BsonDocument>("{ dropDatabase: 1 }");
+            var test = App._IMongoDB.RunCommand(command);
+
+        }
+
     }
 }

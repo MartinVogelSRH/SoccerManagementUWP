@@ -40,5 +40,10 @@ namespace SoccerManagementUWP
         {
             Frame.Navigate(typeof(PlayerList));
         }
+
+        private void b_showPlayerProfile_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PlayerProfile));
+        }
     }
 }
