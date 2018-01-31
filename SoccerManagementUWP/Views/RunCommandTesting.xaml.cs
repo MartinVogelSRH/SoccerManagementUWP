@@ -22,23 +22,32 @@ namespace SoccerManagementUWP.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PlayerProfile : Page
+    public sealed partial class RunCommandTesting : Page
     {
-        public PlayerProfile()
+        public RunCommandTesting()
         {
             this.InitializeComponent();
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private void btn_Execute_Click(object sender, RoutedEventArgs e)
         {
-            Frame.GoBack();
+            var command = new JsonCommand<BsonDocument>(tbx_command.Text);
+            try
+            {
+                var result = App._IMongoDB.RunCommand(command);
+                tbl_Results.Text =  result.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                tbl_Results.Text = ex.ToString();
+            }
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
-
+            tbx_command.Text = "{dropDatabase: 1}";
         }
-
     }
 }

@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="SoccerManagementUWP.Views.RunCommandTesting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoccerManagementUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"    >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="tbx_command" Grid.Row="0" HorizontalAlignment="Stretch" Margin="5" TextWrapping="Wrap" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ></TextBox>
+        <!--<Controls:GridSplitter Grid.Row="1" Background="Gray" HorizontalAlignment="Center" Height="10" ResizeBehavior="BasedOnAlignment" ResizeDirection="Auto" CursorBehavior="ChangeOnSplitterHover" GripperForeground="White" GripperCursor="Default" ></Controls:GridSplitter>-->
+            <RelativePanel Grid.Row="2" x:Name="rlp_seperator">
+                <TextBlock RelativePanel.AlignLeftWithPanel="True" Text="Result:"></TextBlock>
+                <Button x:Name="btn_Execute" RelativePanel.AlignRightWithPanel="True" Content="Execute" Click="btn_Execute_Click" ></Button>
+            </RelativePanel>
+        <TextBlock x:Name="tbl_Results" Grid.Row="3" TextWrapping="WrapWholeWords" ScrollViewer.VerticalScrollBarVisibility="Visible" ></TextBlock>
+
+    </Grid>
+</Page>

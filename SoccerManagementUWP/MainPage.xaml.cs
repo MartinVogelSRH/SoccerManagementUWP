@@ -45,5 +45,10 @@ namespace SoccerManagementUWP
         {
             Frame.Navigate(typeof(PlayerProfile));
         }
+
+        private void btn_testRunCommand_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(RunCommandTesting));
+        }
     }
 }
