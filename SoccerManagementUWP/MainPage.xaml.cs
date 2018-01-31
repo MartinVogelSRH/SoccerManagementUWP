@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,6 +28,15 @@ namespace SoccerManagementUWP
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            //var CommandBar = new Command();
+            
+            //App._IMongoDB.RunCommand()
+            //tbx_Test.Text =  App._IMongoDB.RunCommand(new Command<JsonCommand>)
+
         }
     }
 }
