@@ -35,19 +35,19 @@ namespace SoccerManagementUWP.Views
             try
             {
                 var result = App._IMongoDB.RunCommand(command);
-                tbl_Results.Text =  result.ToString();
+                tbx_Results.Text =  result.ToString();
             }
             catch (Exception ex)
             {
 
-                tbl_Results.Text = ex.ToString();
+                tbx_Results.Text = ex.ToString();
             }
 
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            tbx_command.Text = "{dropDatabase: 1}";
+            tbx_command.Text = "{ aggregate:'teams', pipeline: [ {$match: {city:'London'}} ] ,cursor:{} } ";
         }
     }
 }
