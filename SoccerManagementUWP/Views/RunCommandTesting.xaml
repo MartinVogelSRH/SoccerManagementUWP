@@ -20,6 +20,7 @@
             <RelativePanel Grid.Row="2" x:Name="rlp_seperator" Padding="5" HorizontalAlignment="Stretch" >
                 <TextBlock RelativePanel.AlignLeftWithPanel="True" Text="Result:"></TextBlock>
                 <Button x:Name="btn_Execute" RelativePanel.AlignRightWithPanel="True" Content="Execute" Click="btn_Execute_Click" ></Button>
+            <CheckBox x:Name="cbx_getAll" Content="Get all results? (Warning: This will increase the runtime)" IsChecked="False" RelativePanel.LeftOf="btn_Execute"></CheckBox>
 
             <TextBox x:Name="tbx_Results" AcceptsReturn="True" HorizontalAlignment="Stretch" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Visible" RelativePanel.Below="btn_Execute" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True"></TextBox>
   
