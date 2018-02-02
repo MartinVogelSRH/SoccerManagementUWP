@@ -8,14 +8,17 @@
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Loaded="Page_Loaded"    >
-
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"></RowDefinition>
             <RowDefinition Height="10"></RowDefinition>
             <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbx_command" Grid.Row="0" HorizontalAlignment="Stretch" Margin="5"  TextWrapping="Wrap" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ></TextBox>
+        <StackPanel Grid.Row="0">
+            <Button x:Name="btn_Back" Content="Back" Click="btn_Back_Click"></Button>
+        <TextBox x:Name="tbx_command" HorizontalAlignment="Stretch" Margin="5"  TextWrapping="Wrap" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ></TextBox>
+        </StackPanel>
         <controls:GridSplitter Grid.Row="1" Background="Gray" HorizontalAlignment="Stretch" Height="10" ResizeBehavior="BasedOnAlignment" ResizeDirection="Rows" CursorBehavior="ChangeOnSplitterHover" GripperForeground="White" GripperCursor="Default" ></controls:GridSplitter>
             <RelativePanel Grid.Row="2" x:Name="rlp_seperator" Padding="5" HorizontalAlignment="Stretch" >
                 <TextBlock RelativePanel.AlignLeftWithPanel="True" Text="Result:"></TextBlock>

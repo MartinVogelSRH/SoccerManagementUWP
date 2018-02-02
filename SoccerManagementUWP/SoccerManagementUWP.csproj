@@ -101,6 +101,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\DataGenerator.xaml.cs">
+      <DependentUpon>DataGenerator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PlayerList.xaml.cs">
       <DependentUpon>PlayerList.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DataGenerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PlayerList.xaml">
       <SubType>Designer</SubType>

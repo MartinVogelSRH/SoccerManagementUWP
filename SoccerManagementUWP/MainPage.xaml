@@ -12,6 +12,7 @@
             <Button x:Name="b_showPlayerList" Content="PlayerList" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Click="b_showPlayerList_Click"></Button>
             <Button x:Name="b_showPlayerProfile" Content="PlayerProfile" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Click="b_showPlayerProfile_Click"></Button>
             <Button x:Name="btn_testRunCommand" Content="Test Run Commands" HorizontalAlignment="Left" Margin="5" Click="btn_testRunCommand_Click"></Button>
+            <Button x:Name="btn_generator" Content="Data Generator" HorizontalAlignment="Left" Margin="5" Click="btn_generator_Click"></Button>
         </StackPanel>
     </Grid>
 </Page>

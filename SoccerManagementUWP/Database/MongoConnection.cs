@@ -15,11 +15,11 @@ namespace SoccerManagementUWP.Database
         {
             var client = new MongoClient(Config.Configuration.mongoConnectionString);
             var db = client.GetDatabase(Config.Configuration.mongoDatabaseName);
-            if (db.RunCommandAsync((Command<BsonDocument>)"{ping:1}").Wait(1000) == true)
+            if (db.RunCommandAsync(new JsonCommand<BsonDocument>("{ping:1}")).Wait(1000) == true)
             {
                 return db;
             }
-            return null;
+            return db;
         }
     }
 }

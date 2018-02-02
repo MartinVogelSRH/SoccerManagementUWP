@@ -70,5 +70,10 @@ namespace SoccerManagementUWP.Views
         {
             tbx_command.Text = "{ aggregate:'teams', pipeline: [ {$match: {city:'London'}} ] ,cursor:{batchSize:773} } ";
         }
+
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }
