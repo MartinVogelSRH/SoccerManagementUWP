@@ -14,7 +14,12 @@ namespace SoccerManagementUWP.Database
         public static IMongoDatabase mongoConnect()
         {
             var client = new MongoClient(Config.Configuration.mongoConnectionString);
-            return client.GetDatabase(Config.Configuration.mongoDatabaseName);
+            var db = client.GetDatabase(Config.Configuration.mongoDatabaseName);
+            if (db.RunCommandAsync((Command<BsonDocument>)"{ping:1}").Wait(1000) == true)
+            {
+                return db;
+            }
+            return null;
         }
     }
 }
