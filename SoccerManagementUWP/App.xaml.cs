@@ -45,11 +45,11 @@ namespace SoccerManagementUWP
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             _IMongoDB = MongoConnection.mongoConnect();
-            if (_IMongoDB == null)
-            {
-                Debug.WriteLine(Environment.NewLine + "No database donnection, shutting down." + Environment.NewLine);
-                Application.Current.Exit();
-            }
+            //if (_IMongoDB == null)
+            //{
+            //    Debug.WriteLine(Environment.NewLine + "No database donnection, shutting down." + Environment.NewLine);
+            //    Application.Current.Exit();
+            //}
             //usage:
             //var collection = App.IMongoDB.GetCollection<BsonDocument>("balls");
             //then use collection to query or insert
