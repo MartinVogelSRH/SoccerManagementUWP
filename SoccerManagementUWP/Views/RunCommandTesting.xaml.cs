@@ -68,7 +68,7 @@ namespace SoccerManagementUWP.Views
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            tbx_command.Text = "{ aggregate:'teams', pipeline: [ {$match: {city:'London'}} ] ,cursor:{batchSize:773} } ";
+            tbx_command.Text = "{ aggregate:'teams', pipeline: [ {$match: {city:'Köln'}} ] ,cursor:{batchSize:773} } ";
         }
 
         private void btn_Back_Click(object sender, RoutedEventArgs e)
