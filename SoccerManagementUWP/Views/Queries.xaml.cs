@@ -42,6 +42,7 @@ namespace SoccerManagementUWP.Views
         private void b_go_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_firstName.Text) || string.IsNullOrWhiteSpace(tb_lastName.Text)) return;
+            tb_output.Text = "";
             playerFirstName = tb_firstName.Text;
             playerLastName = tb_lastName.Text;
             var id = getPlayerId(tb_firstName.Text, tb_lastName.Text);
@@ -60,7 +61,7 @@ namespace SoccerManagementUWP.Views
             var yellow = (from card in events where card.playerId == id && card.eventType == "Yellow Card" select card).ToList().Count();
             var red = (from card in events where card.playerId == id && card.eventType == "Yellow Red Card" select card).ToList().Count();
 
-            tb_output.Text = "Name: " + playerLastName + Environment.NewLine + "Surname: " + playerFirstName + Environment.NewLine + "Yellow Cards: " + yellow + Environment.NewLine + "Yellow-Red Cards: " + red;
+            tb_output.Text = "Surname: " + playerFirstName + Environment.NewLine + "Name: " + playerLastName + Environment.NewLine + "Yellow Cards: " + yellow + Environment.NewLine + "Yellow-Red Cards: " + red;
         }
 
         public List<Player> getYellowCardsForAllPlayer()
@@ -73,6 +74,7 @@ namespace SoccerManagementUWP.Views
 
         private void b_goAll_Click(object sender, RoutedEventArgs e)
         {
+            lv_outputAll.Items.Clear();
             var list = getYellowCardsForAllPlayer();
             for (int i = 0; i < 50; i++)
             {
