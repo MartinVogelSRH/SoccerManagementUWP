@@ -7,8 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded">
 
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <AppBarButton Icon="Back" Click="AppBarButton_Click"/>
     
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
@@ -19,11 +21,11 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         
-        <StackPanel Grid.Column="0" Grid.Row="0" Margin="50,80,0,0">
-            <TextBlock Text="Get Yellow and Red Cards for Player:" Margin="0,0,0,30"/>
-            <TextBox x:Name="tb_firstName" Text="Enter First Name" Margin="0,0,0,30"></TextBox>
-            <TextBox x:Name="tb_lastName" Text="Enter Last Name"></TextBox>
-            <Button x:Name="b_go" Content="Run Query" Margin="0,80,0,0" Click="b_go_Click"></Button>
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
+            <TextBlock Text="Get Yellow and Red Cards for Player:" Margin="5"/>
+            <TextBox x:Name="tb_firstName" Text="Enter First Name" Margin="5"></TextBox>
+            <TextBox x:Name="tb_lastName" Text="Enter Last Name" Margin="5"></TextBox>
+            <Button x:Name="b_go" Content="Run Query" Margin="5" Click="b_go_Click" HorizontalAlignment="Right"></Button>
         </StackPanel>
 
         <Line HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Fill="Black"></Line>
@@ -40,4 +42,5 @@
             <ListBox x:Name="lv_outputAll" Margin="5" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </StackPanel>
     </Grid>
+    </StackPanel>
 </Page>
