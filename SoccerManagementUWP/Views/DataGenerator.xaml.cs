@@ -408,13 +408,13 @@ namespace SoccerManagementUWP.Views
                 {"competitionId",competition1["_id"] },
                 {"awayTeamId",team1["_id"] },
                 {"homeTeamId",team2["_id"] },
-                {"startTime", new DateTime(2017,03,26,15,30,00) }
+                {"startDate", new DateTime(2017,03,26,15,30,00) }
             };
             var game2 = new BsonDocument {
                 {"competitionId",competition1["_id"] },
                 {"awayTeamId",team2["_id"] },
                 {"homeTeamId",team1["_id"] },
-                {"startTime", new DateTime(2017,09,03,20,45,00) }
+                {"startDate", new DateTime(2017,09,03,20,45,00) }
             };
             collGames.InsertMany(new List<BsonDocument>
             {

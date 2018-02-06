@@ -48,20 +48,29 @@ namespace SoccerManagementUWP.Views
             var id = getPlayerId(tb_firstName.Text, tb_lastName.Text);
             getYellowAndRedCardsForPlayer(id);
         }
-
         public static ObjectId getPlayerId(string firstNamePlayer, string lastName)
         {
             var players = GetCollections.getPlayerCollection();
             return (players.First(e => e.firstName == firstNamePlayer && e.lastName == lastName)).Id;
         }
-
         public void getYellowAndRedCardsForPlayer(ObjectId id)
         {
             var events = GetCollections.getEventCollection();
-            var yellow = (from card in events where card.playerId == id && card.eventType == "Yellow Card" select card).ToList().Count();
-            var red = (from card in events where card.playerId == id && card.eventType == "Yellow Red Card" select card).ToList().Count();
-
-            tb_output.Text = "Surname: " + playerFirstName + Environment.NewLine + "Name: " + playerLastName + Environment.NewLine + "Yellow Cards: " + yellow + Environment.NewLine + "Yellow-Red Cards: " + red;
+            var yellow = (
+                from card in events
+                where card.playerId == id 
+                && card.eventType == "Yellow Card"
+                select card).ToList().Count();
+            var red = (
+                from card in events
+                where card.playerId == id 
+                && card.eventType == "Yellow Red Card"
+                select card).ToList().Count();
+            tb_output.Text = 
+                "First Name: " + playerFirstName + Environment.NewLine + 
+                "Last Name: " + playerLastName + Environment.NewLine + 
+                "Yellow Cards: " + yellow + Environment.NewLine + 
+                "Yellow-Red Cards: " + red;
         }
 
         public List<Player> getYellowCardsForAllPlayer()
