@@ -55,5 +55,10 @@ namespace SoccerManagementUWP
         {
             Frame.Navigate(typeof(DataGenerator));
         }
+
+        private void btn_query_F_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Queries));
+        }
     }
 }

@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 namespace SoccerManagementUWP.Model
 {
     [BsonIgnoreExtraElements]
-    public class Event
+    public class Teams
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public ObjectId playerId { get; set; }
-        public string eventType { get; set; }
-        public string type { get; set; }
+        public string name { get; set; }
+        public string country { get; set; }
     }
 }
