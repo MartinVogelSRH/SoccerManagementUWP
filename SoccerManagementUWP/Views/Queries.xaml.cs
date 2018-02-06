@@ -90,5 +90,10 @@ namespace SoccerManagementUWP.Views
                 lv_outputAll.Items.Add(list[i].firstName + " " + list[i].lastName + ": " + list[i].yellowCards);
             }
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }
